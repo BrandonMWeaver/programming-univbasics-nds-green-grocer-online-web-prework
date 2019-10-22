@@ -46,8 +46,17 @@ def apply_coupons(cart, coupons)
   #  index += 1
   #end
   
-  pp temp
-  return temp
+  index = 0
+  while index < coupons.size do
+    item = coupons[index][:item]
+    if cart[item][:count] >= coupons[index][:num]
+      cart[item][:count] -= coupons[index][:num]
+      new_price = coupons[index][:cost] / coupons[index][:num]
+      cart["#{item} W/COUPON"] = cart[item]
+    index += 1
+  end
+  pp cart
+  return cart
 end
 
 def apply_clearance(cart)
