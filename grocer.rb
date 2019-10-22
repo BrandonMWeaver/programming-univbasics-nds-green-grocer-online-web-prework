@@ -30,24 +30,6 @@ end
 def apply_coupons(cart, coupons)
   temp = []
   
-  #index = 0
-  #while index < coupons.size do
-  #  item = coupons[index][:item]
-  #  if cart[item] != nil && cart[item][:count] >= coupons[index][:num]
-  #    cart[item][:count] -= coupons[index][:num]
-  #    if cart[item][:count] != 0
-  #      cart[item][:item] = item
-  #      temp << cart[item]
-  #      new_price = coupons[index][:cost] / coupons[index][:num]
-  #      temp << { price: new_price, clearance: cart[item][:clearance], count: coupons[index][:num]#, item: "#{item}, W/COUPON" }
-  #    else temp << cart[item]
-  #    end
-  #  end
-  #  index += 1
-  #end
-  
-  temp = []
-  
   index = 0
   while index < coupons.size do
     item = coupons[index][:item]
