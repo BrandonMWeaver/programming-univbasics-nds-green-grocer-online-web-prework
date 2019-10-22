@@ -53,6 +53,7 @@ def apply_coupons(cart, coupons)
       cart[item][:count] -= coupons[index][:num]
       new_price = coupons[index][:cost] / coupons[index][:num]
       cart["#{item} W/COUPON"] = cart[item]
+    end
     index += 1
   end
   pp cart
