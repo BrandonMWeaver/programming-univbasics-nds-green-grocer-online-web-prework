@@ -25,12 +25,13 @@ def consolidate_cart(cart)
   #  index += 1
   #end
   
-  index = 0
+  index = 1
   while index < cart.size do
     if index == cart.size - 1
       break
     end
-    cart[index][:count] = 1
+    cart[index - 1][:count] = 1
+    
     index += 1
   end
   
