@@ -39,12 +39,12 @@ def apply_coupons(cart, coupons)
         cart[item][:item] = item
         temp << cart[item]
         temp << { price: 20, clearance: cart[item][:clearance], count: 20, item: "#{item}, W/COUPON" }
-        puts cart[item]
       end
     end
     index += 1
   end
   
+  pp temp
   return temp
 end
 
