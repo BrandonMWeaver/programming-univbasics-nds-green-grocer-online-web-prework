@@ -46,6 +46,8 @@ def apply_coupons(cart, coupons)
   #  index += 1
   #end
   
+  temp = []
+  
   index = 0
   while index < coupons.size do
     item = coupons[index][:item]
@@ -59,6 +61,13 @@ def apply_coupons(cart, coupons)
     end
     index += 1
   end
+  
+  index = 10
+  while index < cart.size do
+    temp << cart[index]
+    index += 1
+  end
+  
   pp cart
   return cart
 end
