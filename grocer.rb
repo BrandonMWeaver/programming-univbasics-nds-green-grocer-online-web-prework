@@ -38,7 +38,7 @@ def apply_coupons(cart, coupons)
       if cart[item][:count] != 0
         cart[item][:item] = item
         temp << cart[item]
-        temp << { price: 20, clearance: cart[item][:clearance], count: 20, item: "#{item}, W/COUPON" }
+        temp << { price: 20, clearance: cart[item][:clearance], count: coupons[index][:num], item: "#{item}, W/COUPON" }
       end
     end
     index += 1
