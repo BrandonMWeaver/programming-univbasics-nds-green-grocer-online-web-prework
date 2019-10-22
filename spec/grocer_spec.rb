@@ -52,11 +52,11 @@ describe "Grocer" do
       consolidated_cart = consolidate_cart(cart)
       i = 0
       while i < consolidated_cart.length do
-        expect(consolidated_cart[i][:count]).to eq(1)
+        expect(consolidated_cart[cart[i][:count]]).to eq(1)
         i += 1
       end
     end
-
+    
     it "increments count when there are multiple items" do
       avocado = find_item_by_name_in_collection('AVOCADO', items)
       cart = [avocado, avocado, find_item_by_name_in_collection('KALE', items)]
