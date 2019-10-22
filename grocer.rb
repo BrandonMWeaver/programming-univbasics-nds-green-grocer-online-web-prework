@@ -11,6 +11,21 @@ def find_item_by_name_in_collection(name, collection)
   return nil
 end
 
+def unique_count(cart)
+  temp = []
+  
+  index = 0
+  while index < cart.size do
+    if !temp.include?(cart[index][:item])
+      temp << cart[index][:item]
+    else
+      cart[index][:count] += 1
+    index += 1
+  end
+  
+  return cart
+end
+
 def consolidate_cart(cart)
   
   index = 0
@@ -18,6 +33,8 @@ def consolidate_cart(cart)
     cart[index][:count] = 1
     index += 1
   end
+  
+  unique_count(cart)
   
   pp cart
   return cart
