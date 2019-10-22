@@ -13,7 +13,7 @@ end
 
 def consolidate_cart(cart)
   items = {}
-  
+  pp cart
   index = 0
   while index < cart.size do
     if !items.include?(cart[index][:item])
