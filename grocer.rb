@@ -25,7 +25,13 @@ def consolidate_cart(cart)
   #  index += 1
   #end
   
+  index = 0
+  while index < cart.size do
+    cart[index][:count] = 1
+    index += 1
+  end
   
+  pp cart
   return items
 end
 
