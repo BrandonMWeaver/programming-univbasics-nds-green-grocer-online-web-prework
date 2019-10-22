@@ -20,6 +20,7 @@ def unique_count(cart)
       temp << cart[index][:item]
     else
       cart[index][:count] += 1
+    end
     index += 1
   end
   
