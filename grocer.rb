@@ -38,6 +38,7 @@ def apply_coupons(cart, coupons)
       if cart[item][:count] != 0
         cart[item][:item] = item
         temp << cart[item]
+        new_price = coupons[index][:cost] / coupons[index][:num]
         temp << { price: 20, clearance: cart[item][:clearance], count: coupons[index][:num], item: "#{item}, W/COUPON" }
       end
     end
