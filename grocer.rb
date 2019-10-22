@@ -12,17 +12,19 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
-  items = {}
-  pp cart
-  index = 0
-  while index < cart.size do
-    if !items.include?(cart[index][:item])
-      items[cart[index][:item]] = { price: cart[index][:price], clearance: cart[index][:clearance], count: 1 }
-    else
-      items[cart[index][:item]][:count] += 1
-    end
-    index += 1
-  end
+  items = []
+  
+  #pp cart
+  #index = 0
+  #while index < cart.size do
+  #  if !items.include?(cart[index][:item])
+  #    items[cart[index][:item]] = { price: cart[index][:price], clearance: cart[index][:clearance], count: 1 }
+  #  else
+  #    items[cart[index][:item]][:count] += 1
+  #  end
+  #  index += 1
+  #end
+  
   
   return items
 end
