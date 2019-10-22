@@ -44,7 +44,7 @@ def apply_coupons(cart, coupons)
     end
     index += 1
   end
-  
+  cart = temp
   pp temp
   return temp
 end
