@@ -16,11 +16,10 @@ def unique_count(cart)
   
   index = 0
   while index < cart.size do
-    if !temp.include?(cart[index])
-      temp << cart[index]
+    if !temp.include?(cart[index][:item])
+      temp << cart[index][:item]
     else
-      temp[index][:count] += 1
-    end
+      cart[index][:count] += 1
     index += 1
   end
   
