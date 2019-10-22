@@ -40,6 +40,7 @@ def apply_coupons(cart, coupons)
         temp << cart[item]
         new_price = coupons[index][:cost] / coupons[index][:num]
         temp << { price: new_price, clearance: cart[item][:clearance], count: coupons[index][:num], item: "#{item}, W/COUPON" }
+      else temp << cart[item]
       end
     end
     index += 1
