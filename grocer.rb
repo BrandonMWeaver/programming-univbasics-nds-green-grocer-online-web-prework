@@ -24,7 +24,7 @@ def unique_count(cart)
     index += 1
   end
   
-  return cart
+  return cart.uniq
 end
 
 def consolidate_cart(cart)
