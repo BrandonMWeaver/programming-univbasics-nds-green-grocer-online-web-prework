@@ -52,6 +52,7 @@ def apply_coupons(cart, coupons)
         temp << { item: "#{temp[i][:item]} W/COUPON", price: temp[i][:price], clearance: temp[i][:clearance], count: coupons[index][:num] }
         if temp[i][:count] == 0
           temp[i].remove
+        end
       end
       i += 1
     end
