@@ -35,10 +35,8 @@ def consolidate_cart(cart)
     index += 1
   end
   
-  unique_count(cart)
-  
   pp cart
-  return cart
+  return unique_count(cart)
 end
 
 def apply_coupons(cart, coupons)
