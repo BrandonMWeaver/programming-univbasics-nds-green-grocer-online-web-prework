@@ -56,6 +56,14 @@ def apply_coupons(cart, coupons)
     
     index += 1
   end
+  
+  index = 0
+  while index < temp.size do
+    if temp[index][:count] == 0
+      temp[index].remove
+    end
+  end
+  
   pp temp
   return temp
 end
