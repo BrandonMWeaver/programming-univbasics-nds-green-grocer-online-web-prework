@@ -66,7 +66,7 @@ describe "Grocer" do
       expect(av[:price]).to eq(3.00)
       expect(av[:clearance]).to eq(true)
       expect(av[:count]).to eq(2)
-
+      
       hipster_lettuce = find_item_by_name_in_collection("KALE", consolidated_cart)
       expect(hipster_lettuce[:price]).to eq(3.00)
       expect(hipster_lettuce[:clearance]).to eq(false)
