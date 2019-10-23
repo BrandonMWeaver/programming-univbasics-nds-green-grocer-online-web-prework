@@ -35,7 +35,6 @@ def consolidate_cart(cart)
     index += 1
   end
   
-  pp unique_count(cart)
   return unique_count(cart)
 end
 
