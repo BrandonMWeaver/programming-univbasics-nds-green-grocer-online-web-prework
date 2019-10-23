@@ -40,8 +40,7 @@ end
 
 def apply_coupons(cart, coupons)
   temp = cart
-  pp cart
-  pp coupons
+  
   index = 0
   while index < coupons.size do
     
@@ -59,7 +58,7 @@ def apply_coupons(cart, coupons)
     
     index += 1
   end
-  
+  pp temp
   return temp
 end
 
