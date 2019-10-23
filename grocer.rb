@@ -39,11 +39,19 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  temp = []
+  temp = cart
   pp cart
   pp coupons
   index = 0
-  while index < cart.size do
+  while index < coupons.size do
+    
+    i = 0
+    while i < cart.size do
+      if coupons[index][:item] == temp[i][:item] && temp[i][:count] >= coupons[index][:num]
+        temp[i][:count] -= coupons[index][:num]
+        temp << { item: temp[i][:item], price: temp[i][:price], clearance: temp[i][:clearance], count: coupons[index][:num] }
+      i += 1
+    end
     
     index += 1
   end
