@@ -39,8 +39,28 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
+  temp = cart
   
-  return cart
+  index = 0
+  while index < coupons.size do
+    
+    i = 0
+    while i < cart.size do
+      if coupons[index][:item] == temp[i][:item] && temp[i][:count] >= coupons[index][:num]
+        temp[i][:count] -= coupons[index][:num]
+        new_price = coupons[index][:cost] / coupons[index][:price]
+        temp << { item: "#{temp[i][:item]} W/COUPON", price: new_price, clearance: temp[i][:clearance], count: coupons[index][:num] }
+        if temp[i][:count] == 0
+          temp[i].remove
+        end
+      end
+      i += 1
+    end
+    
+    index += 1
+  end
+  pp temp
+  return temp
 end
 
 def apply_clearance(cart)
