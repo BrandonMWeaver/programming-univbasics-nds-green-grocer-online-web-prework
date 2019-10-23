@@ -50,6 +50,7 @@ def apply_coupons(cart, coupons)
       if coupons[index][:item] == temp[i][:item] && temp[i][:count] >= coupons[index][:num]
         temp[i][:count] -= coupons[index][:num]
         temp << { item: temp[i][:item], price: temp[i][:price], clearance: temp[i][:clearance], count: coupons[index][:num] }
+      end
       i += 1
     end
     
